@@ -13,7 +13,7 @@ Compiling
 ---------
 
 This code is an esp-idf project. You will need esp-idf to compile it. Newer versions of esp-idf may introduce incompatibilities with this code;
-for your reference. esp-idf test work well version: v3.3-rc-dirty
+for your reference. esp-idf test work well version: v3.3.4
 
 Controller
 ----------
@@ -22,8 +22,11 @@ This emulator fully supports the Faces Gamepad kit: https://m5stack.com/collecti
 
 ROM
 ---
-This NES emulator comes with a public domain ROM. If you want to use your own, please remember official nintendo roms are under copyright and the user bears the responsibility for any legal action. In order to upload a different rom change the 
-.nes filename to the name of your rom in the flash.sh script in the firmware folder. Use esptool to flash the files to the device.
+If you want to use your own, please remember official nintendo roms are under copyright and the user bears the responsibility for any legal action.
+
+Use esptool to flash the files to the device:
+
+``esptool.py --chip esp32 write_flash -fs 4MB 0x100000 <rom-file.nes>``
 
 Copyright
 ---------
